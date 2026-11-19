@@ -90,11 +90,11 @@ int main(void)
             for (float v = -cubeWidth; v < cubeWidth; v += incrementSpeed)
             {
                 renderSurface(u, v, cubeWidth, 0, 0, 1);  // Back
-                renderSurface(u, v, cubeWidth, 0, 0, -1); // Front
-                renderSurface(u, v, cubeWidth, 1, 0, 0);  // Right
-                renderSurface(u, v, cubeWidth, -1, 0, 0); // Left
-                renderSurface(u, v, cubeWidth, 0, 1, 0);  // Top
-                renderSurface(u, v, cubeWidth, 0, -1, 0); // Bottom
+                renderSurface(u, v, -cubeWidth, 0, 0, -1); // Front
+                renderSurface(cubeWidth,u, v, 1, 0, 0);  // Right
+                renderSurface(-cubeWidth, u, v, -1, 0, 0); // Left
+                renderSurface(u,cubeWidth, v, 0, 1, 0);  // Top
+                renderSurface(u,-cubeWidth, v, 0, -1, 0); // Bottom
             }
         }
 
